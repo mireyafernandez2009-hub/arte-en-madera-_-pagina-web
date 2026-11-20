@@ -1,283 +1,327 @@
-
+/* CONFIGURACIÓN GENERAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Georgia, serif;
+    font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
 }
 
 body {
-    background: #f8ead8;
+    background: #faf5ef;
     color: #3b1d0b;
 }
 
-/* MENU (DE TU EQUIPO) */
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+}
+
+/* =========================================
+   1. MENÚ DE NAVEGACIÓN (HEADER)
+   ========================================= */
 header {
-    background: #fff0dd;
-    padding: 15px 5%;
+    background: #f8efe6;
+    padding: 15px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    border-bottom: 2px solid #a16b3d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(59, 29, 11, 0.15);
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .logo img {
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
     object-fit: contain;
 }
 
 .logo h2 {
-    font-size: 25px;
+    font-size: 24px;
+    line-height: 1.1;
+    color: #3b1d0b;
 }
 
 nav {
     display: flex;
-    gap: 20px;
+    gap: 28px;
     flex-wrap: wrap;
 }
 
 nav a {
     text-decoration: none;
     color: #3b1d0b;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #a65e26;
+    text-decoration: underline;
 }
 
-/* INICIO (DE TU EQUIPO) */
+/* =========================================
+   2. PORTADA (SECCIÓN INICIO)
+   ========================================= */
 .inicio {
-    min-height: 380px;
+    min-height: 480px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 50px 8%;
+    text-align: center;
+    padding: 60px 8%;
     background:
-    linear-gradient(90deg, rgba(255,239,216,.92), rgba(255,239,216,.35)),
-    url("../img/puerta1.jpg") center/cover no-repeat;
+        linear-gradient(rgba(248, 239, 230, 0.72), rgba(248, 239, 230, 0.72)),
+        url("../img/puerta1.jpg") center/cover no-repeat;
 }
 
 .inicio h1 {
-    font-size: 55px;
-    margin-bottom: 12px;
+    font-size: 56px;
+    margin-bottom: 10px;
+    color: #3b1d0b;
+}
+
+.inicio h1::before {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 3px;
+    background-color: #3b1d0b;
+    margin: 0 auto 14px auto;
 }
 
 .inicio p {
-    font-size: 23px;
-    margin-bottom: 25px;
+    font-size: 22px;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+    color: #3b1d0b;
 }
 
 .boton {
     display: inline-block;
-    background: #4a210d;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 25px;
+    background: #3b1d0b;
+    color: #f8efe6;
+    padding: 13px 30px;
+    border-radius: 30px;
     text-decoration: none;
+    font-weight: 600;
     border: none;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .boton:hover {
-    background: #9a5b2b;
-}
-
-/* TITULOS GENERALES (DE TU EQUIPO) */
-section {
-    padding: 45px 6%;
-}
-
-.titulo {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.descripcion {
-    text-align: center;
-    margin-bottom: 28px;
+    background: #6e3b1e;
+    transform: translateY(-2px);
 }
 
 /* =========================================
-   TUS 3 SECCIONES (DISEÑO DEL BOCETO)
+   3. SECCIÓN SERVICIOS (FRANJA CON ICONOS)
    ========================================= */
-
-/* 1. SERVICIOS */
 .seccion-servicios {
-    background-color: #f1d9bd;
+    background-color: #ebd8c5;
+    padding: 40px 6%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 35px 10%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.servicio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    flex: 1;
+    min-width: 200px;
 }
 
 .servicio-item i {
-    font-size: 2rem;
-    color: #4a210d;
-    margin-bottom: 10px;
+    font-size: 32px;
+    color: #3b1d0b;
+    margin-bottom: 12px;
 }
 
 .servicio-item p {
-    font-weight: bold;
-    font-size: 1rem;
+    font-weight: 600;
+    font-size: 16px;
+    color: #3b1d0b;
 }
 
 .divisor {
     width: 1px;
     height: 60px;
-    background-color: rgba(74, 33, 13, 0.3);
+    background-color: rgba(59, 29, 11, 0.35);
 }
 
-/* 2. GALERIA / CATALOGO */
+/* =========================================
+   4. SECCIÓN GALERÍA / NUESTROS PRODUCTOS
+   ========================================= */
 .seccion-catalogo {
-    background-color: #f8ead8;
-    padding: 60px 8%;
+    background-color: #faf5ef;
+    padding: 65px 8%;
     text-align: center;
 }
 
 .seccion-catalogo h2 {
-    font-size: 32px;
+    font-size: 34px;
+    color: #3b1d0b;
     margin-bottom: 8px;
 }
 
-.seccion-catalogo .subtitulo {
-    margin-bottom: 35px;
-    font-size: 1.05rem;
+.subtitulo {
+    color: #5e3a24;
+    font-size: 16px;
+    margin-bottom: 40px;
 }
 
 .galeria-productos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 24px;
     margin-bottom: 35px;
+}
+
+.tarjeta-producto {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(59, 29, 11, 0.12);
+    background-color: #ffffff;
 }
 
 .tarjeta-producto img {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: block;
     transition: transform 0.3s ease;
 }
 
 .tarjeta-producto img:hover {
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
 
 .btn-oscuro {
     display: inline-block;
-    background-color: #4a210d;
-    color: #ffffff;
+    background-color: #3b1d0b;
+    color: #faf5ef;
+    padding: 12px 30px;
+    border-radius: 30px;
     text-decoration: none;
-    padding: 12px 28px;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background 0.3s;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-oscuro:hover {
-    background-color: #9a5b2b;
+    background-color: #6e3b1e;
+    transform: translateY(-2px);
 }
 
-/* 3. SOBRE NOSOTROS */
+/* =========================================
+   5. SECCIÓN SOBRE NOSOTROS
+   ========================================= */
 .seccion-nosotros {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #4a210d;
-    color: white;
+    background-color: #3b1d0b;
+    color: #faf5ef;
     padding: 0;
 }
 
 .nosotros-imagen img {
     width: 100%;
     height: 100%;
-    min-height: 320px;
+    min-height: 360px;
     object-fit: cover;
     display: block;
 }
 
 .nosotros-contenido {
-    padding: 45px 8%;
+    padding: 55px 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    text-align: left;
 }
 
 .nosotros-contenido h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 16px;
 }
 
 .nosotros-contenido p {
+    font-size: 16px;
     line-height: 1.7;
-    font-size: 17px;
-    margin-bottom: 25px;
-    color: #f8ead8;
+    color: #ebd8c5;
+    margin-bottom: 26px;
 }
 
 .btn-claro {
-    display: inline-block;
-    background-color: #f8ead8;
-    color: #4a210d;
-    text-decoration: none;
-    padding: 10px 24px;
-    border-radius: 25px;
-    font-weight: bold;
+    background-color: #faf5ef;
+    color: #3b1d0b;
+    padding: 11px 26px;
+    border-radius: 30px;
     border: none;
+    font-weight: 600;
+    font-size: 15px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-claro:hover {
-    background-color: #ffffff;
+    background-color: #ebd8c5;
+    transform: translateY(-2px);
 }
 
-/* VENTANA EMERGENTE SOBRE LA PAGINA (MODAL) */
+/* =========================================
+   6. VENTANA EMERGENTE (MODAL)
+   ========================================= */
 .modal-fondo {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 2000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(25, 12, 5, 0.7);
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
 .modal-caja {
-    background-color: #f8ead8;
+    background-color: #faf5ef;
     color: #3b1d0b;
     padding: 35px 40px;
-    border-radius: 15px;
-    max-width: 550px;
+    border-radius: 16px;
+    max-width: 500px;
     width: 100%;
     position: relative;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    animation: aparecer 0.25s ease;
+    text-align: center;
 }
 
 .modal-caja h2 {
-    color: #4a210d;
+    font-size: 28px;
     margin-bottom: 15px;
 }
 
 .modal-caja p {
+    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 12px;
 }
@@ -288,35 +332,43 @@ section {
     right: 20px;
     font-size: 28px;
     font-weight: bold;
-    color: #4a210d;
+    color: #3b1d0b;
     cursor: pointer;
 }
 
-@keyframes aparecer {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
 /* =========================================
-   CONTACTO Y FOOTER (DE TU EQUIPO)
+   7. CONTACTO Y PIE DE PÁGINA
    ========================================= */
 .contacto {
     background: #f1d9bd;
+    padding: 60px 6%;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5e3a24;
 }
 
 .formulario {
     max-width: 600px;
     margin: auto;
     background: #fff5e9;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px #0002;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .formulario label {
     display: block;
     margin: 12px 0 6px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .formulario input,
@@ -324,7 +376,8 @@ section {
     width: 100%;
     padding: 12px;
     border: 1px solid #b58a65;
-    border-radius: 7px;
+    border-radius: 8px;
+    font-size: 15px;
 }
 
 .formulario textarea {
@@ -337,11 +390,10 @@ section {
     width: 100%;
 }
 
-/* PIE DE PAGINA */
 footer {
     background: #351707;
-    color: white;
-    padding: 30px 5%;
+    color: #f8efe6;
+    padding: 35px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -349,7 +401,7 @@ footer {
     gap: 20px;
 }
 
-/* CELULARES */
+/* RESPONSIVE PARA CELULARES */
 @media (max-width: 768px) {
     header {
         justify-content: center;
@@ -358,20 +410,15 @@ footer {
 
     nav {
         justify-content: center;
+        gap: 15px;
     }
 
     .inicio h1 {
         font-size: 38px;
     }
 
-    .seccion-servicios {
-        flex-direction: column;
-        gap: 20px;
-    }
-
     .divisor {
-        width: 60%;
-        height: 1px;
+        display: none;
     }
 
     .galeria-productos,
