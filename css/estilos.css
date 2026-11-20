@@ -12,7 +12,7 @@ body {
     color: #3b1d0b;
 }
 
-/* MENU */
+/* MENU (DE TU EQUIPO) */
 header {
     background: #fff0dd;
     padding: 15px 5%;
@@ -55,7 +55,7 @@ nav a:hover {
     color: #a65e26;
 }
 
-/* INICIO */
+/* INICIO (DE TU EQUIPO) */
 .inicio {
     min-height: 380px;
     display: flex;
@@ -91,7 +91,7 @@ nav a:hover {
     background: #9a5b2b;
 }
 
-/* TITULOS */
+/* TITULOS GENERALES (DE TU EQUIPO) */
 section {
     padding: 45px 6%;
 }
@@ -107,73 +107,199 @@ section {
     margin-bottom: 28px;
 }
 
-/* SERVICIOS */
-.servicios-contenedor {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
+/* =========================================
+   TUS 3 SECCIONES (DISEÑO DEL BOCETO)
+   ========================================= */
 
-.servicio {
-    background: #fff5e9;
-    padding: 25px;
+/* 1. SERVICIOS */
+.seccion-servicios {
+    background-color: #f1d9bd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 35px 10%;
     text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px #0002;
 }
 
-.servicio h3 {
-    margin: 12px 0;
+.servicio-item i {
+    font-size: 2rem;
+    color: #4a210d;
+    margin-bottom: 10px;
 }
 
-/* GALERIA */
-.galeria-contenedor {
+.servicio-item p {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.divisor {
+    width: 1px;
+    height: 60px;
+    background-color: rgba(74, 33, 13, 0.3);
+}
+
+/* 2. GALERIA / CATALOGO */
+.seccion-catalogo {
+    background-color: #f8ead8;
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.seccion-catalogo h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.seccion-catalogo .subtitulo {
+    margin-bottom: 35px;
+    font-size: 1.05rem;
+}
+
+.galeria-productos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 25px;
+    margin-bottom: 35px;
 }
 
-.galeria-contenedor img {
+.tarjeta-producto img {
     width: 100%;
-    height: 220px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px #0003;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
-/* NOSOTROS */
-.nosotros {
+.tarjeta-producto img:hover {
+    transform: scale(1.03);
+}
+
+.btn-oscuro {
+    display: inline-block;
+    background-color: #4a210d;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-oscuro:hover {
+    background-color: #9a5b2b;
+}
+
+/* 3. SOBRE NOSOTROS */
+.seccion-nosotros {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background: #4a210d;
+    background-color: #4a210d;
     color: white;
     padding: 0;
 }
 
-.nosotros img {
+.nosotros-imagen img {
     width: 100%;
-    height: 300px;
+    height: 100%;
+    min-height: 320px;
     object-fit: cover;
+    display: block;
 }
 
-.texto-nosotros {
-    padding: 40px;
+.nosotros-contenido {
+    padding: 45px 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
 }
 
-.texto-nosotros h2 {
+.nosotros-contenido h2 {
     font-size: 30px;
     margin-bottom: 15px;
 }
 
-.texto-nosotros p {
+.nosotros-contenido p {
     line-height: 1.7;
     font-size: 17px;
+    margin-bottom: 25px;
+    color: #f8ead8;
 }
 
-/* CONTACTO */
+.btn-claro {
+    display: inline-block;
+    background-color: #f8ead8;
+    color: #4a210d;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-claro:hover {
+    background-color: #ffffff;
+}
+
+/* VENTANA EMERGENTE SOBRE LA PAGINA (MODAL) */
+.modal-fondo {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-caja {
+    background-color: #f8ead8;
+    color: #3b1d0b;
+    padding: 35px 40px;
+    border-radius: 15px;
+    max-width: 550px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: aparecer 0.25s ease;
+}
+
+.modal-caja h2 {
+    color: #4a210d;
+    margin-bottom: 15px;
+}
+
+.modal-caja p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4a210d;
+    cursor: pointer;
+}
+
+@keyframes aparecer {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* =========================================
+   CONTACTO Y FOOTER (DE TU EQUIPO)
+   ========================================= */
 .contacto {
     background: #f1d9bd;
 }
@@ -238,9 +364,18 @@ footer {
         font-size: 38px;
     }
 
-    .servicios-contenedor,
-    .galeria-contenedor,
-    .nosotros {
+    .seccion-servicios {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .divisor {
+        width: 60%;
+        height: 1px;
+    }
+
+    .galeria-productos,
+    .seccion-nosotros {
         grid-template-columns: 1fr;
     }
 
