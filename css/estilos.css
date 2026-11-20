@@ -1,1 +1,251 @@
-body{font-family:Arial;background:#f2f2f2;padding-top:40px;text-align:center;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8ead8;
+    color: #3b1d0b;
+}
+
+/* MENU */
+header {
+    background: #fff0dd;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #a16b3d;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3b1d0b;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a65e26;
+}
+
+/* INICIO */
+.inicio {
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+    background:
+    linear-gradient(90deg, rgba(255,239,216,.92), rgba(255,239,216,.35)),
+    url("../img/puerta1.jpg") center/cover no-repeat;
+}
+
+.inicio h1 {
+    font-size: 55px;
+    margin-bottom: 12px;
+}
+
+.inicio p {
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+.boton {
+    display: inline-block;
+    background: #4a210d;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #9a5b2b;
+}
+
+/* TITULOS */
+section {
+    padding: 45px 6%;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.descripcion {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+/* SERVICIOS */
+.servicios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.servicio {
+    background: #fff5e9;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #0002;
+}
+
+.servicio h3 {
+    margin: 12px 0;
+}
+
+/* GALERIA */
+.galeria-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.galeria-contenedor img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #0003;
+}
+
+/* NOSOTROS */
+.nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #4a210d;
+    color: white;
+    padding: 0;
+}
+
+.nosotros img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.texto-nosotros {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto-nosotros h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.texto-nosotros p {
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+/* CONTACTO */
+.contacto {
+    background: #f1d9bd;
+}
+
+.formulario {
+    max-width: 600px;
+    margin: auto;
+    background: #fff5e9;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #0002;
+}
+
+.formulario label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b58a65;
+    border-radius: 7px;
+}
+
+.formulario textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.formulario button {
+    margin-top: 18px;
+    width: 100%;
+}
+
+/* PIE DE PAGINA */
+footer {
+    background: #351707;
+    color: white;
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* CELULARES */
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .inicio h1 {
+        font-size: 38px;
+    }
+
+    .servicios-contenedor,
+    .galeria-contenedor,
+    .nosotros {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

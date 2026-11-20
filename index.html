@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte en Madera</title>
+
+    <!-- CONECTAR CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <h2>Arte en Madera</h2>
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#galeria">Galería</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- INICIO -->
+    <section class="inicio" id="inicio">
+        <div>
+            <h1>Arte en Madera</h1>
+            <p>Diseño • Calidad • Estilo</p>
+            <a href="#galeria" class="boton">Explorar catálogo</a>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+        <h2 class="titulo">Nuestros Servicios</h2>
+        <p class="descripcion">Calidad y diseños personalizados.</p>
+
+        <div class="servicios-contenedor">
+            <div class="servicio">
+                <h3>Fabricación de muebles</h3>
+                <p>Mesas, sillas y muebles para el hogar.</p>
+            </div>
+
+            <div class="servicio">
+                <h3>Puertas de madera</h3>
+                <p>Diseños resistentes y elegantes.</p>
+            </div>
+
+            <div class="servicio">
+                <h3>Diseños personalizados</h3>
+                <p>Trabajos según las necesidades del cliente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria">
+        <h2 class="titulo">Galería de Trabajos</h2>
+        <p class="descripcion">Nuestros trabajos en madera.</p>
+
+        <div class="galeria-contenedor">
+            <img src="img/imagen de sillas.png" alt="Mesa y sillas">
+            <img src="img/imagen de zapatero.png" alt="Zapatero">
+            <img src="img/puerta1.jpg" alt="Puerta">
+        </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="nosotros" id="nosotros">
+        <img src="img/puerta1.jpg" alt="Trabajo en madera">
+
+        <div class="texto-nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>
+                Somos Arte en Madera, un negocio dedicado
+                a la fabricación de muebles y trabajos artesanales.
+                Ofrecemos calidad, creatividad y diseños
+                personalizados para nuestros clientes.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACTO Y FORMULARIO -->
+    <section id="contacto" class="contacto">
+        <h2 class="titulo">Contáctanos</h2>
+        <p class="descripcion">Estamos listos para ayudarte.</p>
+
+        <form class="formulario" id="formulario">
+
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" required></textarea>
+
+            <button type="submit" class="boton">
+                Enviar mensaje
+            </button>
+
+        </form>
+    </section>
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+        <div>
+            <h2>Arte en Madera</h2>
+            <p>Diseño, calidad y trabajo artesanal.</p>
+        </div>
+
+        <div>
+            <p>Contáctanos para más información.</p>
+            <p>Teléfono: +591 70000000</p>
+        </div>
+    </footer>
+
+    <!-- CONECTAR JAVASCRIPT -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
